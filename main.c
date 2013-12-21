@@ -53,7 +53,7 @@ int main(void) {
     float actual_baud;
     const int baud = 9600;
 
-    pb_clock = SYSTEMConfigPerformance(SYS_CLK);
+    pb_clock = SYSTEMConfigPerformance(SYS_CLK); // if sys_clock > 100MHz, pb_clock = sys_clock/2 else pb_clock = sys_clock
 
     PORTSetPinsDigitalOut(IOPORT_E, BIT_4); // led
 
