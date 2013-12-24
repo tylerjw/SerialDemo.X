@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c configuration_bits.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c configuration_bits.c U1.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/configuration_bits.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/configuration_bits.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/configuration_bits.o ${OBJECTDIR}/U1.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/configuration_bits.o.d ${OBJECTDIR}/U1.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/configuration_bits.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/configuration_bits.o ${OBJECTDIR}/U1.o
 
 # Source Files
-SOURCEFILES=main.c configuration_bits.c
+SOURCEFILES=main.c configuration_bits.c U1.c
 
 
 CFLAGS=
@@ -103,6 +103,12 @@ ${OBJECTDIR}/configuration_bits.o: configuration_bits.c  nbproject/Makefile-${CN
 	@${RM} ${OBJECTDIR}/configuration_bits.o 
 	@${FIXDEPS} "${OBJECTDIR}/configuration_bits.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c   
 	
+${OBJECTDIR}/U1.o: U1.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/U1.o.d 
+	@${RM} ${OBJECTDIR}/U1.o 
+	@${FIXDEPS} "${OBJECTDIR}/U1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/U1.o.d" -o ${OBJECTDIR}/U1.o U1.c   
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} ${OBJECTDIR} 
@@ -115,6 +121,12 @@ ${OBJECTDIR}/configuration_bits.o: configuration_bits.c  nbproject/Makefile-${CN
 	@${RM} ${OBJECTDIR}/configuration_bits.o.d 
 	@${RM} ${OBJECTDIR}/configuration_bits.o 
 	@${FIXDEPS} "${OBJECTDIR}/configuration_bits.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/configuration_bits.o.d" -o ${OBJECTDIR}/configuration_bits.o configuration_bits.c   
+	
+${OBJECTDIR}/U1.o: U1.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} ${OBJECTDIR} 
+	@${RM} ${OBJECTDIR}/U1.o.d 
+	@${RM} ${OBJECTDIR}/U1.o 
+	@${FIXDEPS} "${OBJECTDIR}/U1.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/U1.o.d" -o ${OBJECTDIR}/U1.o U1.c   
 	
 endif
 
